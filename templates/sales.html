@@ -2,17 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
-
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+    
+    <title>salestable</title>
 
 
 
@@ -25,187 +25,135 @@
 
         }
 
-        .border {
-            width: 1166px;
-            height: 500px;
-            margin-left: 25px;
-            position: relative;
-            margin-top: 5px;
 
+        .container .row .card {
+            margin-left: 120px;
+            margin-top: 70px;
         }
 
-        .col-12 .g-col-3 .card ul li {
+        .container .row .card ul li {
             background-color: rgb(113, 112, 112);
             color: rgb(248, 1, 1);
-        }
-
-        .col-12 .g-col-3 .card ul {
-            border-radius: 0%;
-            width: 150px;
-        }
-
-        .col-12 .g-col-3 .card {
-            margin-left: 260px;
-            margin-top: 50px;
-
-        }
-
-        .g-col-9 .row-cols-8 {
-            margin-left: 600px;
-            margin-top: -270px;
-        }
-
-        .g-col-9 form button {
-            margin-left: 850px;
-
-
-        }
-
-        .g-col-9 .dropdown {
-            margin-left: 420px;
-            margin-top: -35px;
-        }
-
-        .g-col-9 .container .table {
-            margin-left: 425px;
-            position: absolute;
-            width: 700px;
         }
     </style>
 </head>
 
 <body>
-    <div class="border">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
 
-            <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
 
-                <a class="navbar-brand" href="#">IMS</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link disabled">Dashboard</a>
-                        <a class="nav-link disabled">Sales</a>
-                        <a class="nav-link disabled">Inventories</a>
-                        <a class="nav-link disabled">Stock</a>
-                    </div>
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#">IMS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link disabled">Dashboard</a>
+                    <a class="nav-link active" href="/sales">Sales</a>
+                    <a class="nav-link disabled">Inventories</a>
+                    <a class="nav-link disabled">Stock</a>
                 </div>
             </div>
-        </nav>
-        <!-- <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
-             <div class="bg-dark p-4">
-                <h5 class="text-body-emphasis h4">Collapsed content</h5>
-                <span class="text-body-secondary">Toggleable via the navbar brand.</span>
-            </div>
-        </div>  -->
 
-        <div class="col-12">
-            <div class="g-col-3">
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+
                 <div class="card" style="width: 9rem;">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"><i class="fa-solid fa-bars"></i> Nav Menu</li>
                         <li class="list-group-item"><i class="fa-solid fa-gauge-high"></i> Dashboard</li>
                         <li class="list-group-item"><i class="fa-solid fa-coins"></i> Inventories</li>
-                        <li class="list-group-item"><i class="fa-sharp fa-solid fa-money-bill-1"></i> Sales</li>
+                        <li class="list-group-item"><a class="nav-link active" href="/sales"><i class="fa-sharp fa-solid fa-money-bill-1"></i> Sales</a></li>
                         <li class="list-group-item"><i class="fa-regular fa-money-bill-1"></i> Stock</li>
                         <li class="list-group-item"><i class="fa-solid fa-user"></i> Users</li>
                     </ul>
                 </div>
             </div>
-            <div class="g-col-9">
-                <div class="row-cols-8">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        + Add New item
-                    </button>
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-lg-4 c0l-md-6 col-sm-12">
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="mb-3">
-                                            <label for="exampleInputname" class="form-label">name</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp">
+                    </div>
 
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="exampleInputbuyingprice" class="form-label">Buying Price</label>
-                                            <input type="number" class="form-control" id="exampleInputPassword1">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="exampleInputsellingprice" class="form-label">Selling
-                                                Price</label>
-                                            <input type="number" class="form-control" id="exampleInputPassword1">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="exampleInputquantity" class="form-label">Quantity</label>
-                                            <input type="number" class="form-control" id="exampleInputPassword1">
-                                        </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <!--  Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            + Add New sale
+                        </button>
 
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Add a sale:</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="/addsales" method="post">
+                                            
+                                            <div class="mb-3">
+                                                <label for="exampleInputbuying_price" class="form-label">pid</label>
+                                                <select type="number" name="pid" class="form-control" id="buying_price">
+                                                    <option value="1">sweet</option> 
+                                                    <option value="2">cake</option>
+                                                    <option value="3">pineapple</option>
+                                                    <option value="4">biscuit</option>
+                                                    <option value="5">popcorn</option>
+                                                    <option value="6">Lettuce</option>
+                                                    <option value="7">broccoli</option>
+                                                    <option value="8">waffles</option>
+                                                    <option value="9">Wheat</option>
+                                                    <option value="10">coffee</option>
+                                                    <option value="11">juice</option>
+                                                    <option value="12">pencil</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputselling_price"
+                                                    class="form-label">quantity</label>
+                                                <input type="number" name="quantity" class="form-control"
+                                                    id="exampleInputPassword1">
+                                            </div>
+                                            
+                                            <input type="submit" class="btn btn-primary">
+                                        </form>
+                                    </div>
+                                    <!--footerwaseditedout from this part-->
                                 </div>
                             </div>
                         </div>
+
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+
                     </div>
                 </div>
-                <!-- <nav class="navbar bg-body-tertiary"> -->
-                <!-- <div class="container-fluid"> -->
-                <form class="d-flex" role="search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                    <input class="form-control me-2" type="search" aria-label="Search">
 
-                </form>
-                <!-- </div> -->
-                <!-- </nav> -->
-                <div class="dropdown"><a>Show </a>
-                    <button class="btn btn-secondary dropdown-toggle " type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        10
-                    </button><a> entries</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">1</a></li>
-                        <li><a class="dropdown-item" href="#">2</a></li>
-                        <li><a class="dropdown-item" href="#">3</a></li>
-                        <li><a class="dropdown-item" href="#">4</a></li>
-                        <li><a class="dropdown-item" href="#">5</a></li>
-                        <li><a class="dropdown-item" href="#">6</a></li>
-                        <li><a class="dropdown-item" href="#">7</a></li>
-                        <li><a class="dropdown-item" href="#">8</a></li>
-                        <li><a class="dropdown-item" href="#">9</a></li>
-                        <li><a class="dropdown-item" href="#">10</a></li>
-                        <li><a class="dropdown-item" href="#">11</a></li>
-                        <li><a class="dropdown-item" href="#">12</a></li>
 
-                    </ul>
-                </div>
-                <div class="container">
-                    <table class="table">
+
+                <div class="row">
+                    <table id="myTable" class="table">
                         <thead>
                             <tr>
                                 <th scope="col">ID</th>
-                                <th scope="col">Product id</th>
-                                <th scope="col">Quantity</th>
-                                <th scope="col">Created_at</th>
-                                <!-- <th scope="col">quantity</th> -->
+                                <th scope="col">pid</th>
+                                <th scope="col">quantity</th>
+                                <th scope="col">created_at</th>
+
 
 
                             </tr>
@@ -217,42 +165,36 @@
                                 <td>{{ i[1]}}</td>
                                 <td>{{ i[2]}}</td>
                                 <td>{{ i[3]}}</td>
-                                <!-- <td>{{ i[4]}}</td> -->
+                                
                             </tr>
                             {% endfor %}
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td colspan="2"></td>
-                                <td></td>
-                            </tr>
+        
                         </tbody>
                     </table>
                 </div>
 
 
-
-
-
-
             </div>
-
-
-
-
         </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
 
 
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"></script>
+        <!-- from jquery cdn.js or cdnjs.com-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+            integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- from datatables.net -->
+        <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+
+        <script>let table = new DataTable('#myTable', {
+            // config options...
+        });</script>
 </body>
 
 </html>

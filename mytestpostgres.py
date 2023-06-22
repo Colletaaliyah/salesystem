@@ -23,7 +23,21 @@ def insert_product(v):
             "VALUES" + vs
         cur.execute(q)
         conn.commit()
-        return "product added successfully"
+        return q
+
+
+def insert_sales(v):
+        vs=str(v)
+        q= "INSERT INTO sales(pid, quantity,created_at)"\
+            "VALUES" + vs
+        cur.execute(q)
+        conn.commit()
+        return q
+
+
+
+
+
 
 # p1=insert_product(('popcorn',50,50,30))
 # print(p1)
