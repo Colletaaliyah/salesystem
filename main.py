@@ -24,7 +24,8 @@ def about():
 @app.route("/sales")
 def sale():
     sales=fetch_data('sales')
-    return render_template("sales.html",sales=sales)
+    prods=fetch_data('products')
+    return render_template("sales.html",sales=sales,prods=prods)
 
 @app.route("/addproducts",methods=['POST','GET'])
 def addproducts():

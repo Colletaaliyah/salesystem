@@ -2,16 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
-    
+
     <title>salestable</title>
 
 
@@ -72,7 +74,8 @@
                         <li class="list-group-item"><i class="fa-solid fa-bars"></i> Nav Menu</li>
                         <li class="list-group-item"><i class="fa-solid fa-gauge-high"></i> Dashboard</li>
                         <li class="list-group-item"><i class="fa-solid fa-coins"></i> Inventories</li>
-                        <li class="list-group-item"><a class="nav-link active" href="/sales"><i class="fa-sharp fa-solid fa-money-bill-1"></i> Sales</a></li>
+                        <li class="list-group-item"><a class="nav-link active" href="/sales"><i
+                                    class="fa-sharp fa-solid fa-money-bill-1"></i> Sales</a></li>
                         <li class="list-group-item"><i class="fa-regular fa-money-bill-1"></i> Stock</li>
                         <li class="list-group-item"><i class="fa-solid fa-user"></i> Users</li>
                     </ul>
@@ -103,10 +106,10 @@
                                     </div>
                                     <div class="modal-body">
                                         <form action="/addsales" method="post">
-                                            
+
                                             <div class="mb-3">
                                                 <label for="exampleInputbuying_price" class="form-label">pid</label>
-                                                <select type="number" name="pid" class="form-control" id="buying_price">
+                                                <!-- <select type="number" name="pid" class="form-control" id="buying_price">
                                                     <option value="1">sweet</option> 
                                                     <option value="2">cake</option>
                                                     <option value="3">pineapple</option>
@@ -119,7 +122,16 @@
                                                     <option value="10">coffee</option>
                                                     <option value="11">juice</option>
                                                     <option value="12">pencil</option>
+                                                </select> -->
+                                                <select name="pid" id="pid">
+                                                    {% for i in prods %}
+                                                    
+                                                        <option value="{{i[0]}}">{{i[1]}}</option>
+                                                    
+                                                    {% endfor %}
+
                                                 </select>
+
                                             </div>
                                             <div class="mb-3">
                                                 <label for="exampleInputselling_price"
@@ -127,7 +139,7 @@
                                                 <input type="number" name="quantity" class="form-control"
                                                     id="exampleInputPassword1">
                                             </div>
-                                            
+
                                             <input type="submit" class="btn btn-primary">
                                         </form>
                                     </div>
@@ -166,10 +178,10 @@
                                 <td>{{ i[1]}}</td>
                                 <td>{{ i[2]}}</td>
                                 <td>{{ i[3]}}</td>
-                                
+
                             </tr>
                             {% endfor %}
-        
+
                         </tbody>
                     </table>
                 </div>
@@ -194,8 +206,8 @@
         <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
 
         <script>let table = new DataTable('#myTable', {
-            // config options...
-        });</script>
+                // config options...
+            });</script>
 </body>
 
 </html>
