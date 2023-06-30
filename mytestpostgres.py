@@ -35,6 +35,13 @@ def insert_sales(v):
         return q
 
 
+def salesperday():
+        q= "SELECT sales.created_at, SUM(quantity) as totalsales FROM sales GROUP BY sales.created_at "
+        cur.execute(q)
+        results = cur.fetchall()
+        return results
+
+
 
 
 

@@ -57,7 +57,7 @@
                     <a class="nav-link disabled">Dashboard</a>
                     <a class="nav-link active" href="/products"> Products</a>
                     <a class="nav-link active" href="/sales">Sales</a>
-                    <a class="nav-link disabled">Inventories</a>
+                    <a class="nav-link active" href="/inventories">inventories</a>
                     <a class="nav-link disabled">Stock</a>
                 </div>
             </div>
@@ -77,9 +77,8 @@
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><i class="fa-solid fa-bars"></i> Nav Menu</li>
                     <li class="list-group-item"><i class="fa-solid fa-gauge-high"></i> Dashboard</li>
-                    <li class="list-group-item"><i class="fa-solid fa-coins"></i> Inventories</li>
-                    <li class="list-group-item"><a class="nav-link active" href="/sales"><i
-                                class="fa-sharp fa-solid fa-money-bill-1"></i> Sales</a></li>
+                    <li class="list-group-item"><a class="nav-link active" href="/inventories"><i class="fa-solid fa-coins"></i> inventories</a></li>
+                    <li class="list-group-item"><a class="nav-link active" href="/sales"><i class="fa-sharp fa-solid fa-money-bill-1"></i> Sales</a></li>
                     <li class="list-group-item"><i class="fa-regular fa-money-bill-1"></i> Stock</li>
                     <li class="list-group-item"><i class="fa-solid fa-user"></i> Users</li>
                 </ul>
@@ -128,9 +127,10 @@
                                                 </select> -->
                                             <select name="pid" id="products">
                                                 {% for i in prods %}
-                                                {% if i[0] > 10 and i[0] < 20 %} <option value="{{i[0]}}">{{i[1]}}
+                                                <!-- {% if i[0] > 10 and i[0] < 20 %} -->
+                                                 <option value="{{i[0]}}">{{i[1]}}
                                                     </option>
-                                                    {% endif %}
+                                                    <!-- {% endif %} -->
                                                     {% endfor %}
 
                                             </select>
@@ -193,6 +193,7 @@
     </div>
 
 </div>
+
 {% endblock %}
 
 
