@@ -34,12 +34,32 @@ def insert_sales(v):
         conn.commit()
         return q
 
+def insert_stock(v):
+        vs=str(v)
+        q= "INSERT INTO stock(pid,quantity,created_at)"\
+            "VALUES" + vs
+        cur.execute(q)
+        conn.commit()
+        return q
+
+
+def users():
+        q= "SELECT * FROM users"
+        cur.execute(q)
+        user=cur.fetchall()
+        return user
 
 def salesperday():
         q= "SELECT sales.created_at, SUM(quantity) as totalsales FROM sales GROUP BY sales.created_at "
         cur.execute(q)
         results = cur.fetchall()
         return results
+
+def salesperproduct():
+      q="SELECT * FROM salesperproduct"
+      cur.execute(q)
+      results = cur.fetchall()
+      return results
 
 
 

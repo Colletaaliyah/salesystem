@@ -67,7 +67,6 @@
 {% block content %}
     <div class="container">
 
-
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-12">
 
@@ -145,8 +144,6 @@
 
                     </div>
                 </div>
-
-
                 <div class="row">
                     <table id="myTable" class="table">
                         <thead>
@@ -156,21 +153,17 @@
                                 <th scope="col">buying price</th>
                                 <th scope="col">selling price</th>
                                 <th scope="col">quantity</th>
-
-
                             </tr>
                         </thead>
 
-                        <tbody>{% for i in prods %}
+                        <tbody>
+                            {% for i in prods %}
                             <tr>
                                 <th scope="row">{{i[0]}}</th>
                                 <td>{{ i[1]}}</td>
                                 <td>{{ i[2]}}</td>
                                 <td>{{ i[3]}}</td>
                                 <td>{{ i[4]}}</td>
-                                
-                                
-
                             </tr>
                             {% endfor %}
                      
@@ -178,13 +171,8 @@
                         </tbody>
                     </table>
                 </div>
-
-
             </div>
         </div>
-
-
-
     </div>
 {% endblock %}
 

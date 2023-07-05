@@ -18,6 +18,20 @@
 
 
     <style>
+        .register {
+            margin-top: -60px;
+            height: 50%;
+
+        }
+
+        .container-fluid2 {
+            margin-left: 400px;
+            margin-right: 30px;
+
+
+
+        }
+
         .container-fluid {
             background-color: rgb(42, 138, 222);
             margin-left: 0px;
@@ -36,11 +50,18 @@
             background-color: rgb(113, 112, 112);
             color: rgb(248, 1, 1);
         }
-       .container .row  embed{
-        margin-left: 300px;
-        width: 450px;
-        margin-top: -275px;
-       }
+
+        .container .row embed {
+            margin-left: 300px;
+            width: 450px;
+            margin-top: -275px;
+        }
+        .user{
+            margin-right: 2%;
+        }
+        .logout{
+            margin-right: 4% ;
+        }
     </style>
 </head>
 
@@ -57,15 +78,19 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link disabled">Dashboard</a>
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <!-- <a class="nav-link disabled">Dashboard</a> -->
+                    <a class="nav-link active" href="/login"> login</a>
+                    <a class="nav-link active" href="/register"> register</a>
                     <a class="nav-link active" href="/products"> Products</a>
                     <a class="nav-link active" href="/sales">Sales</a>
                     <a class="nav-link active" href="/inventories">inventories</a>
-                    <a class="nav-link disabled">Stock</a>
+                    <a class="nav-link active" href="/stock">Stock</a>
                 </div>
             </div>
-
+            <div class="user"><a class="nav-link active" href="/users">user</a></div>
+                <div class="logout"><a class="nav-link active" href="/logout">logout</a>
+            </div>
         </div>
     </nav>
 
@@ -73,24 +98,25 @@
 
 
 
+
     {% endblock %}
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
-<!-- from jquery cdn.js or cdnjs.com-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<!-- from datatables.net -->
-<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <!-- from jquery cdn.js or cdnjs.com-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- from datatables.net -->
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
 
-<script>
-  let table = new DataTable('#myTable', {
-        // config options...
-    });
- </script>
+    <script>
+        let table = new DataTable('#myTable', {
+            // config options...
+        });
+    </script>
 </body>
 
 </html>

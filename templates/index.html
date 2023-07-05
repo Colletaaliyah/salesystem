@@ -11,7 +11,7 @@
         .container-fluid {
             background-color: rgb(42, 138, 222);
             margin-left: 25px;
-            margin-right: 175px;
+            margin-right: 44px;
 
         }
 
@@ -58,6 +58,12 @@
             font-size: medium;
             margin-right: 550px;
         }
+        .user{
+            margin-right: 2%;
+        }
+        .logout{
+            margin-right: 4% ;
+        }
     </style>
 </head>
 
@@ -73,15 +79,19 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
                     <a class="nav-link disabled">Dashboard</a>
+                    <a class="nav-link active" href="/login"> login</a>
+                    <a class="nav-link active" href="/register"> register</a>
                     <a class="nav-link active" href="/products"> Products</a>
                     <a class="nav-link active" href="/sales"> Sales</a>
                     <a class="nav-link active" href="/inventories">inventories</a>
-                    <a class="nav-link disabled">Stock</a>
+                    <a class="nav-link active" href="/stock">Stock</a>
                 </div>
             </div>
-
+            <div class="user"><a class="nav-link active" href="/users">user</a></div>
+            <div class="logout"><a class="nav-link active" href="/logout">logout</a>
+        </div>
         </div>
     </nav>
     <div class="border">
